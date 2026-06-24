@@ -1,0 +1,168 @@
+!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trazabilidad — Caravana #AR-0042</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #F4F9F5; color: #1a1a1a; }
+
+  .header {
+    background: #2E5D3A;
+    color: white;
+    padding: 24px 20px 20px;
+    position: relative;
+  }
+  .header .badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 20px; padding: 4px 12px;
+    font-size: 12px; margin-bottom: 12px;
+  }
+  .badge .dot { width: 7px; height: 7px; border-radius: 50%; background: #6EE7A0; }
+  .header h1 { font-size: 22px; font-weight: 700; line-height: 1.25; margin-bottom: 4px; }
+  .header p { font-size: 14px; opacity: 0.8; margin-bottom: 14px; }
+  .apto {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(255,255,255,0.18);
+    border-radius: 20px; padding: 5px 14px;
+    font-size: 13px; font-weight: 500;
+  }
+  .apto::before { content: '✓'; font-weight: 700; }
+
+  .content { padding: 0 16px 32px; }
+
+  .section {
+    background: white;
+    border-radius: 14px;
+    margin-top: 14px;
+    overflow: hidden;
+    border: 1px solid #E2EDE6;
+  }
+  .section-title {
+    display: flex; align-items: center; gap: 8px;
+    padding: 14px 16px 10px;
+    font-size: 14px; font-weight: 600; color: #2E5D3A;
+    border-bottom: 1px solid #F0F5F1;
+  }
+  .section-title svg { opacity: 0.8; }
+
+  .field { display: flex; justify-content: space-between; align-items: flex-start; padding: 10px 16px; border-bottom: 1px solid #F5F9F6; gap: 12px; }
+  .field:last-child { border-bottom: none; }
+  .field-label { font-size: 13px; color: #6B8A74; white-space: nowrap; }
+  .field-value { font-size: 13px; font-weight: 500; color: #1C3A24; text-align: right; }
+
+  .timeline { padding: 4px 16px 8px; }
+  .tl-item { display: flex; gap: 12px; padding: 10px 0; position: relative; }
+  .tl-item:not(:last-child)::after {
+    content: ''; position: absolute;
+    left: 7px; top: 26px; bottom: -10px;
+    width: 2px; background: #D6EAE0;
+  }
+  .tl-dot { width: 16px; height: 16px; border-radius: 50%; background: #2E5D3A; flex-shrink: 0; margin-top: 2px; display: flex; align-items: center; justify-content: center; }
+  .tl-dot svg { width: 8px; height: 8px; }
+  .tl-date { font-size: 11px; color: #6B8A74; margin-bottom: 2px; }
+  .tl-text { font-size: 13px; font-weight: 500; color: #1C3A24; }
+
+  .faena-highlight {
+    background: linear-gradient(135deg, #2E5D3A 0%, #3d7a4e 100%);
+    color: white; border-radius: 14px; margin-top: 14px; padding: 16px;
+  }
+  .faena-highlight .section-title { color: white; border-bottom-color: rgba(255,255,255,0.15); padding: 0 0 10px; }
+  .faena-highlight .field { border-bottom-color: rgba(255,255,255,0.1); }
+  .faena-highlight .field-label { color: rgba(255,255,255,0.65); }
+  .faena-highlight .field-value { color: white; }
+
+  .footer-card {
+    margin-top: 20px; text-align: center;
+    padding: 16px; background: white;
+    border-radius: 14px; border: 1px solid #E2EDE6;
+  }
+  .footer-card .logo { font-size: 15px; font-weight: 700; color: #2E5D3A; margin-bottom: 4px; }
+  .footer-card p { font-size: 11px; color: #8FAD97; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="badge"><span class="dot"></span>Vista pública activa</div>
+  <h1>Angus · Macho · Caravana #AR-0042</h1>
+  <p>La Querencia — Villa del Rosario, Córdoba</p>
+  <span class="apto">Apto para consumo</span>
+</div>
+
+<div class="content">
+
+  <!-- ORIGEN -->
+  <div class="section">
+    <div class="section-title">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+      Origen
+    </div>
+    <div class="field"><span class="field-label">Establecimiento</span><span class="field-value">La Querencia</span></div>
+    <div class="field"><span class="field-label">Localidad</span><span class="field-value">Villa del Rosario, Córdoba</span></div>
+    <div class="field"><span class="field-label">Sistema de cría</span><span class="field-value">Pastoril extensivo</span></div>
+    <div class="field"><span class="field-label">Fecha de nacimiento</span><span class="field-value">12/03/2022</span></div>
+  </div>
+
+  <!-- ALIMENTACIÓN -->
+  <div class="section">
+    <div class="section-title">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2M7 13l3 3 7-7"/></svg>
+      Alimentación
+    </div>
+    <div class="field"><span class="field-label">Tipo</span><span class="field-value">Pasturas naturales + verdeos de invierno</span></div>
+    <div class="field"><span class="field-label">Potrero</span><span class="field-value">Lote 4 — Campo norte</span></div>
+    <div class="field"><span class="field-label">Período</span><span class="field-value">Mar 2022 → Oct 2024</span></div>
+  </div>
+
+  <!-- HISTORIAL SANITARIO -->
+  <div class="section">
+    <div class="section-title">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+      Historial sanitario
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"><svg viewBox="0 0 10 10" fill="white"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></div>
+        <div><div class="tl-date">15/04/2022</div><div class="tl-text">Vacuna aftosa — dosis 2ml</div></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"><svg viewBox="0 0 10 10" fill="white"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></div>
+        <div><div class="tl-date">10/08/2022</div><div class="tl-text">Vacuna mancha y gangrena</div></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"><svg viewBox="0 0 10 10" fill="white"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></div>
+        <div><div class="tl-date">03/03/2023</div><div class="tl-text">Antiparasitario interno</div></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"><svg viewBox="0 0 10 10" fill="white"><path d="M2 5l2.5 2.5L8 3" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></div>
+        <div><div class="tl-date">21/09/2024</div><div class="tl-text">Control veterinario pre-faena</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAENA -->
+  <div class="faena-highlight">
+    <div class="section-title">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+      Faena
+    </div>
+    <div class="field"><span class="field-label">Fecha</span><span class="field-value">28/10/2024</span></div>
+    <div class="field"><span class="field-label">Frigorífico</span><span class="field-value">Frío Córdoba S.A.</span></div>
+    <div class="field"><span class="field-label">Peso canal</span><span class="field-value">287 kg</span></div>
+    <div class="field" style="border-bottom:none"><span class="field-label">Fracción</span><span class="field-value">Media res izquierda</span></div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer-card">
+    <div class="logo">TrazaGan</div>
+    <p>Información verificada por el productor · Sistema de trazabilidad ganadera</p>
+    <p style="margin-top:4px">Tecnicatura en Desarrollo de Software · 2026</p>
+  </div>
+
+</div>
+</body>
+</html>
